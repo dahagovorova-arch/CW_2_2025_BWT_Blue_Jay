@@ -27,7 +27,6 @@
       color: #007bff;
       font-weight: bold;
     }
-  
 
     .unorderedList {
       margin: 30px 0px 50px 570px;
@@ -53,7 +52,31 @@
       background: #333;
       text-decoration: none;
     }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      width: calc(25% - 20px);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+    }
   </style>
+</head>
 
 <body>
   <nav>
@@ -69,19 +92,13 @@
   </nav>
 
   <a href="#top" id="toTop" class="toTop">↑</a>
-  </head>
 
-  <body>
+  <div class="container">
+    <h2>Покормите птиц нашего заповедника</h2>
+    <div id="cards-container" class="card-container"></div>
+  </div>
 
-    <div class="container">
-      <h2>Покормите птиц нашего заповедника</h2>
-      <p></p>
-      <div id="cards-container" class="row g-4"></div>
-    </div>
-
-    <script src="birds.js"></script>
-  </body>
-
+  <script src="birds.js"></script>
+</body>
 
 </html>
-
