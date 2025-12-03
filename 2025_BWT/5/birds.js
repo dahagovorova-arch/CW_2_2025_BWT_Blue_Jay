@@ -49,23 +49,18 @@ const cardsData = [
   }
 ];
 
-
 const container = document.getElementById("cards-container");
-
 
 cardsData.forEach((item, index) => {
   const cardHtml = `
-    <div class="col-md-3">
-      <div class="card h-100">
-        <img src="${item.imgSrc}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">${item.text}</p>
-          <p class="card-text">Кол-во желудей: <input class="w-25" type="number" name="amount-${index + 1}" value="0"></p>
-        </div>
+    <div class="card">
+      <img src="${item.imgSrc}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">${item.text}</p>
+        <p class="card-text">Кол-во желудей: <input class="w-25" type="number" name="amount-${index + 1}" value="0"></p>
       </div>
     </div>
   `;
-
 
   container.insertAdjacentHTML('beforeend', cardHtml);
 });
